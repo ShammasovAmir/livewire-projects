@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Calculator;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', fn() => view('welcome'))->name('counter');
+Route::get('/counter', fn() => view('welcome'))->name('counter');
+Route::get('/calculator', fn() => view('calculator'))->name('calculator');
+Route::get('/todo-list', fn() => view('todo-list'))->name('todo-list');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
