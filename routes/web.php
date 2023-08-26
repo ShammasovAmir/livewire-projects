@@ -19,6 +19,9 @@ Route::get('/', fn() => view('welcome'))->name('counter');
 Route::get('/counter', fn() => view('welcome'))->name('counter');
 Route::get('/calculator', fn() => view('calculator'))->name('calculator');
 Route::get('/todo-list', fn() => view('todo-list'))->name('todo-list');
+Route::get('/cascading-dropdown', fn() => view('cascading-dropdown'))->name('cascading-dropdown');
+Route::get('/products', fn() => view('products'))->name('products');
+Route::get('/image-upload', fn() => view('image-upload'))->name('image-upload');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
